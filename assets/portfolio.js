@@ -14,7 +14,6 @@ document.querySelectorAll('.bts-toggle').forEach((button, index) => {
 
 const lightbox = document.getElementById('lightbox');
 const image = lightbox.querySelector('img');
-const caption = lightbox.querySelector('figcaption');
 const counter = lightbox.querySelector('.lightbox-counter');
 let currentImages = [];
 let currentIndex = 0;
@@ -25,7 +24,6 @@ function showImage(index) {
   const selected = currentImages[currentIndex];
   image.src = selected.src;
   image.alt = selected.alt;
-  caption.textContent = '';
   counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
   lightbox.querySelector('.lightbox-prev').hidden = currentImages.length < 2;
   lightbox.querySelector('.lightbox-next').hidden = currentImages.length < 2;

@@ -25,7 +25,7 @@ function showImage(index) {
   const selected = currentImages[currentIndex];
   image.src = selected.src;
   image.alt = selected.alt;
-  caption.textContent = selected.closest('figure')?.querySelector('figcaption')?.textContent || selected.alt;
+  caption.textContent = '';
   counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
   lightbox.querySelector('.lightbox-prev').hidden = currentImages.length < 2;
   lightbox.querySelector('.lightbox-next').hidden = currentImages.length < 2;
